@@ -1,3 +1,3 @@
 # jakuboskera infrastructure
 
-Resources in Terraform Cloud and Heroku managed via Terraform.
+Resources in [Terraform Cloud](https://terraform.io/cloud) and [Heroku](https://heroku.com) managed via Terraform.

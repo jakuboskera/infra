@@ -1,3 +1,3 @@
 # jakuboskera Heroku
 
-Resources in Heroku managed via Terraform.
+Resources in [Heroku](https://heroku.com) managed via Terraform.
