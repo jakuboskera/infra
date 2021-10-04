@@ -1,5 +1,5 @@
 resource "heroku_app" "write-comment" {
-  name = "write-comment"
+  name   = "write-comment"
   region = "eu"
 }
 
@@ -14,5 +14,5 @@ resource "heroku_domain" "write-comment" {
 }
 
 output "write-comment_url" {
-    value = "https://${heroku_app.write-comment.name}.herokuapp.com"
+  value = "https://${heroku_app.write-comment.name}.herokuapp.com"
 }
