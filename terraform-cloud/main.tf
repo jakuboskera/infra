@@ -34,3 +34,30 @@ resource "tfe_workspace" "heroku" {
     oauth_token_id     = tfe_oauth_client.jakuboskera.oauth_token_id
   }
 }
+
+resource "tfe_variable" "heroku_api_key" {
+  key          = "heroku_api_key"
+  value        = var.heroku_api_key
+  category     = "terraform"
+  sensitive    = true
+  workspace_id = tfe_workspace.heroku.id
+  description  = "Heroku token"
+}
+
+resource "tfe_variable" "tfe_token" {
+  key          = "tfe_token"
+  value        = var.tfe_token
+  category     = "terraform"
+  sensitive    = true
+  workspace_id = tfe_workspace.terraform-cloud.id
+  description  = "Terraform Cloud token"
+}
+
+resource "tfe_variable" "oauth_token" {
+  key          = "oauth_token"
+  value        = var.oauth_token
+  category     = "terraform"
+  sensitive    = true
+  workspace_id = tfe_workspace.terraform-cloud.id
+  description  = "GitHub token"
+}
