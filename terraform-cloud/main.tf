@@ -19,7 +19,7 @@ resource "tfe_workspace" "terraform-cloud" {
     branch             = "main"
     identifier         = "jakuboskera/infra"
     ingress_submodules = false
-    oauth_token_id     = tfe_oauth_client.jakuboskera.id
+    oauth_token_id     = tfe_oauth_client.jakuboskera.oauth_token_id
   }
 }
 
@@ -31,6 +31,6 @@ resource "tfe_workspace" "heroku" {
     branch             = "main"
     identifier         = "jakuboskera/infra"
     ingress_submodules = false
-    oauth_token_id     = tfe_oauth_client.jakuboskera.id
+    oauth_token_id     = tfe_oauth_client.jakuboskera.oauth_token_id
   }
 }
