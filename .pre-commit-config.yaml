@@ -1,0 +1,28 @@
+repos:
+- repo: https://github.com/pre-commit/pre-commit-hooks
+  rev: v4.0.1
+  hooks:
+  - id: trailing-whitespace
+  - id: end-of-file-fixer
+  - id: check-yaml
+    exclude: ^helm/guestbook/templates/
+  - id: mixed-line-ending
+    args: ['--fix=lf']
+    description: Forces to replace line ending by the UNIX 'lf' character.
+- repo: https://github.com/gruntwork-io/pre-commit
+  rev: v0.1.15
+  hooks:
+  - id: markdown-link-check
+- repo: https://github.com/gruntwork-io/pre-commit
+  rev: v0.1.15
+  hooks:
+    - id: tflint
+      args:
+        - "--module"
+    - id: terraform-validate
+    - id: terraform-fmt
+- repo: git://github.com/antonbabenko/pre-commit-terraform
+  rev: v1.51.0
+  hooks:
+    - id: terraform_tfsec
+    - id: terraform_docs

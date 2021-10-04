@@ -1,0 +1,16 @@
+# General
+*.backup
+*.log
+
+# Mac
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Terraform
+.terraform
+*.tfvars
+!*.EXAMPLE.tfvars
+*.tfstate
+*.tfstate
+.terraform.tfstate.lock.info
