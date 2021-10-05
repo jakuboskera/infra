@@ -150,5 +150,5 @@ resource "cloudflare_record" "guestbook_jakuboskera_dev" {
   value   = "octagonal-tangerine-mxjyk49l20i2oxn88433gmp6.herokudns.com"
   type    = "CNAME"
   ttl     = 1
-  proxied = true
+  proxied = false
 }
