@@ -18,6 +18,7 @@ resource "tfe_variable" "terraform-cloud-heroku_email" {
   workspace_id = tfe_workspace.terraform-cloud.id
   description  = "Heroku email"
 }
+
 resource "tfe_variable" "terraform-cloud-heroku_api_key" {
   key          = "heroku_api_key"
   value        = var.heroku_api_key
