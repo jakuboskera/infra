@@ -10,6 +10,15 @@ resource "tfe_workspace" "cloudflare" {
   }
 }
 
+resource "tfe_variable" "cloudflare-cloudflare_email" {
+  key          = "cloudflare_email"
+  value        = var.cloudflare_email
+  category     = "terraform"
+  sensitive    = true
+  workspace_id = tfe_workspace.cloudflare.id
+  description  = "Cloudflare email"
+}
+
 resource "tfe_variable" "cloudflare-cloudflare_api_key" {
   key          = "cloudflare_api_key"
   value        = var.cloudflare_api_key
