@@ -10,13 +10,21 @@ resource "tfe_workspace" "terraform-cloud" {
   }
 }
 
+resource "tfe_variable" "terraform-cloud-heroku_email" {
+  key          = "heroku_email"
+  value        = var.heroku_email
+  category     = "terraform"
+  sensitive    = true
+  workspace_id = tfe_workspace.terraform-cloud.id
+  description  = "Heroku email"
+}
 resource "tfe_variable" "terraform-cloud-heroku_api_key" {
   key          = "heroku_api_key"
   value        = var.heroku_api_key
   category     = "terraform"
   sensitive    = true
   workspace_id = tfe_workspace.terraform-cloud.id
-  description  = "Heroku token"
+  description  = "Heroku api key"
 }
 
 resource "tfe_variable" "terraform-cloud-tfe_token" {
@@ -37,11 +45,20 @@ resource "tfe_variable" "terraform-cloud-oauth_token" {
   description  = "GitHub token"
 }
 
-resource "tfe_variable" "terraform-cloud-cloudflare_token" {
-  key          = "cloudflare_token"
-  value        = var.cloudflare_token
+resource "tfe_variable" "terraform-cloud-cloudflare_api_key" {
+  key          = "cloudflare_api_key"
+  value        = var.cloudflare_api_key
   category     = "terraform"
   sensitive    = true
-  workspace_id = tfe_workspace.heroku.id
-  description  = "Cloudflare token"
+  workspace_id = tfe_workspace.terraform-cloud.id
+  description  = "Cloudflare api key"
+}
+
+resource "tfe_variable" "terraform-cloud-cloudflare_email" {
+  key          = "cloudflare_email"
+  value        = var.cloudflare_email
+  category     = "terraform"
+  sensitive    = true
+  workspace_id = tfe_workspace.terraform-cloud.id
+  description  = "Cloudflare email"
 }

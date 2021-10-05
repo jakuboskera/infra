@@ -1,6 +1,4 @@
-variable "heroku_api_key" {}
-
 provider "heroku" {
-  email   = "iam@jakuboskera.dev"
+  email   = var.heroku_email
   api_key = var.heroku_api_key
 }

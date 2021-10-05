@@ -1,7 +1,7 @@
 resource "tfe_workspace" "cloudflare" {
   name              = "cloudflare"
   organization      = tfe_organization.jakuboskera.id
-  working_directory = "clourflare"
+  working_directory = "cloudflare"
   vcs_repo {
     branch             = "main"
     identifier         = "jakuboskera/infra"
@@ -10,11 +10,11 @@ resource "tfe_workspace" "cloudflare" {
   }
 }
 
-resource "tfe_variable" "cloudflare-cloudflare_token" {
-  key          = "cloudflare_token"
-  value        = var.cloudflare_token
+resource "tfe_variable" "cloudflare-cloudflare_api_key" {
+  key          = "cloudflare_api_key"
+  value        = var.cloudflare_api_key
   category     = "terraform"
   sensitive    = true
-  workspace_id = tfe_workspace.heroku.id
-  description  = "Cloudflare token"
+  workspace_id = tfe_workspace.cloudflare.id
+  description  = "Cloudflare api key"
 }
