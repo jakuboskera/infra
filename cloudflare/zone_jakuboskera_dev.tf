@@ -7,7 +7,7 @@ resource "cloudflare_zone_settings_override" "jakuboskera_dev" {
   settings {
     always_use_https         = "on"
     automatic_https_rewrites = "on"
-    ssl                      = "full"
+    ssl                      = "flexible"
   }
 }
 
