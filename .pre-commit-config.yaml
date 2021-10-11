@@ -9,6 +9,8 @@ repos:
   - id: mixed-line-ending
     args: ['--fix=lf']
     description: Forces to replace line ending by the UNIX 'lf' character.
+  - id: no-commit-to-branch
+    args: ['--branch', 'main']
 - repo: https://github.com/gruntwork-io/pre-commit
   rev: v0.1.15
   hooks:
