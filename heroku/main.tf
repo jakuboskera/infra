@@ -1,6 +1,7 @@
 resource "heroku_app" "write-comment" {
   name   = "write-comment"
   region = "eu"
+  acm    = false
 }
 
 resource "heroku_addon" "write-comment" {
