@@ -18,7 +18,7 @@ resource "cloudflare_record" "jakuboskera_dev_108" {
   type            = "A"
   ttl             = 1
   allow_overwrite = false
-  proxied         = true
+  proxied         = false
 }
 
 resource "cloudflare_record" "jakuboskera_dev_109" {
@@ -28,7 +28,7 @@ resource "cloudflare_record" "jakuboskera_dev_109" {
   type            = "A"
   ttl             = 1
   allow_overwrite = false
-  proxied         = true
+  proxied         = false
 }
 
 resource "cloudflare_record" "jakuboskera_dev_110" {
@@ -38,7 +38,7 @@ resource "cloudflare_record" "jakuboskera_dev_110" {
   type            = "A"
   ttl             = 1
   allow_overwrite = false
-  proxied         = true
+  proxied         = false
 }
 
 resource "cloudflare_record" "jakuboskera_dev_111" {
@@ -48,7 +48,7 @@ resource "cloudflare_record" "jakuboskera_dev_111" {
   type            = "A"
   ttl             = 1
   allow_overwrite = false
-  proxied         = true
+  proxied         = false
 }
 
 resource "cloudflare_record" "_domainconnect" {
@@ -67,7 +67,7 @@ resource "cloudflare_record" "www" {
   type            = "CNAME"
   ttl             = 1
   allow_overwrite = false
-  proxied         = true
+  proxied         = false
 }
 
 resource "cloudflare_record" "jakuboskera_dev_alt4" {
