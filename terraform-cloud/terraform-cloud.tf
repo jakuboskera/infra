@@ -10,6 +10,9 @@ resource "tfe_workspace" "terraform-cloud" {
   }
 }
 
+# These vars are needed to be part of terraform-cloud workspace in
+# order create these vars in other workspaces like cloudflare, heroku etc.
+# and then used by this workspaces
 resource "tfe_variable" "terraform-cloud-heroku_email" {
   key          = "heroku_email"
   value        = var.heroku_email
@@ -62,4 +65,13 @@ resource "tfe_variable" "terraform-cloud-cloudflare_email" {
   sensitive    = true
   workspace_id = tfe_workspace.terraform-cloud.id
   description  = "Cloudflare email"
+}
+
+resource "tfe_variable" "terraform-cloud-icloud_dns_token" {
+  key          = "icloud_dns_token"
+  value        = var.icloud_dns_token
+  category     = "terraform"
+  sensitive    = true
+  workspace_id = tfe_workspace.terraform-cloud.id
+  description  = "iCloud DNS token"
 }

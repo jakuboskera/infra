@@ -27,3 +27,12 @@ resource "tfe_variable" "cloudflare-cloudflare_api_key" {
   workspace_id = tfe_workspace.cloudflare.id
   description  = "Cloudflare api key"
 }
+
+resource "tfe_variable" "cloudflare-icloud_dns_token" {
+  key          = "icloud_dns_token"
+  value        = var.icloud_dns_token
+  category     = "terraform"
+  sensitive    = true
+  workspace_id = tfe_workspace.cloudflare.id
+  description  = "iCloud DNS token"
+}
