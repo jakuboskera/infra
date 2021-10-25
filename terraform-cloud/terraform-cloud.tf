@@ -2,12 +2,6 @@ resource "tfe_workspace" "terraform-cloud" {
   name              = "terraform-cloud"
   organization      = tfe_organization.jakuboskera.id
   working_directory = "terraform-cloud"
-  vcs_repo {
-    branch             = "main"
-    identifier         = "jakuboskera/infra"
-    ingress_submodules = false
-    oauth_token_id     = tfe_oauth_client.jakuboskera.oauth_token_id
-  }
 }
 
 # These vars are needed to be part of terraform-cloud workspace in
@@ -38,15 +32,6 @@ resource "tfe_variable" "terraform-cloud-tfe_token" {
   sensitive    = true
   workspace_id = tfe_workspace.terraform-cloud.id
   description  = "Terraform Cloud token"
-}
-
-resource "tfe_variable" "terraform-cloud-oauth_token" {
-  key          = "oauth_token"
-  value        = var.oauth_token
-  category     = "terraform"
-  sensitive    = true
-  workspace_id = tfe_workspace.terraform-cloud.id
-  description  = "GitHub token"
 }
 
 resource "tfe_variable" "terraform-cloud-cloudflare_api_key" {

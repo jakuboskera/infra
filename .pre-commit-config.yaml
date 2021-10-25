@@ -15,7 +15,6 @@ repos:
   rev: v0.1.15
   hooks:
   - id: markdown-link-check
-
 - repo: https://github.com/antonbabenko/pre-commit-terraform
   rev: v1.51.0
   hooks:
