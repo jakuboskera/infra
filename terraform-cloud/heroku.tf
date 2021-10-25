@@ -2,12 +2,6 @@ resource "tfe_workspace" "heroku" {
   name              = "heroku"
   organization      = tfe_organization.jakuboskera.id
   working_directory = "heroku"
-  vcs_repo {
-    branch             = "main"
-    identifier         = "jakuboskera/infra"
-    ingress_submodules = false
-    oauth_token_id     = tfe_oauth_client.jakuboskera.oauth_token_id
-  }
 }
 
 resource "tfe_variable" "heroku-heroku_email" {
