@@ -25,6 +25,17 @@ resource "heroku_addon" "should-be-done" {
   plan = "heroku-postgresql:hobby-dev"
 }
 
+resource "heroku_config" "should-be-done" {
+  sensitive_vars = {
+    API_KEY = var.heroku_should-be-done_api_key
+  }
+}
+
+resource "heroku_app_config_association" "should-be-done" {
+  app_id         = heroku_app.should-be-done.id
+  sensitive_vars = heroku_config.should-be-done.sensitive_vars
+}
+
 resource "heroku_domain" "should-be-done" {
   app      = heroku_app.should-be-done.name
   hostname = "todo.jakuboskera.dev"
