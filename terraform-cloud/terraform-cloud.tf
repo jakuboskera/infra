@@ -60,3 +60,12 @@ resource "tfe_variable" "terraform-cloud-icloud_dns_token" {
   workspace_id = tfe_workspace.terraform-cloud.id
   description  = "iCloud DNS token"
 }
+
+resource "tfe_variable" "terraform-cloud-heroku_should-be-done_api_key" {
+  key          = "heroku_should-be-done_api_key"
+  value        = var.heroku_should-be-done_api_key
+  category     = "terraform"
+  sensitive    = true
+  workspace_id = tfe_workspace.terraform-cloud.id
+  description  = "API key for https://todo.jakuboskera.dev application"
+}
