@@ -131,3 +131,12 @@ resource "cloudflare_record" "guestbook_jakuboskera_dev" {
   ttl     = 1
   proxied = true
 }
+
+resource "cloudflare_record" "todo_jakuboskera_dev" {
+  zone_id = cloudflare_zone.jakuboskera_dev.id
+  name    = "todo"
+  value   = "concave-kurrat-osshq1ve92b2g44eyhuizmyr.herokudns.com"
+  type    = "CNAME"
+  ttl     = 1
+  proxied = true
+}
