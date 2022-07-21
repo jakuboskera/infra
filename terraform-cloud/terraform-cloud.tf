@@ -69,3 +69,12 @@ resource "tfe_variable" "terraform-cloud-heroku_should-be-done_api_key" {
   workspace_id = tfe_workspace.terraform-cloud.id
   description  = "API key for https://todo.jakuboskera.dev application"
 }
+
+resource "tfe_variable" "terraform-cloud-todo_api_key" {
+  key          = "todo_api_key"
+  value        = var.todo_api_key
+  category     = "terraform"
+  sensitive    = true
+  workspace_id = tfe_workspace.terraform-cloud.id
+  description  = "API key for https://todo.jakuboskera.dev application"
+}
