@@ -19,4 +19,10 @@ tf-terraform-cloud-init: ## Initialize a terraform project terraform-cloud
 tf-heroku-init: ## Initialize a terraform project heroku
 	terraform -chdir=heroku init
 
+tf-todo-init: ## Initialize a terraform project todo
+	terraform -chdir=todo init
+
+tf-todo-init: ## Initialize a terraform project todo
+	terraform -chdir=todo init
+
 # New targets here
