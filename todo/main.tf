@@ -3,7 +3,7 @@ resource "todo_task" "coding" {
 }
 
 resource "todo_task" "football" {
-  text = "Play a football to keep your body in physical healthy"
+  text = "Play a football to keep your body in physical health"
 }
 
 resource "todo_task" "cooking" {
