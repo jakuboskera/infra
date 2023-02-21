@@ -135,10 +135,10 @@ resource "cloudflare_record" "guestbook_jakuboskera_dev" {
 resource "cloudflare_record" "todo_jakuboskera_dev" {
   zone_id = cloudflare_zone.jakuboskera_dev.id
   name    = "todo"
-  value   = "concave-kurrat-osshq1ve92b2g44eyhuizmyr.herokudns.com"
-  type    = "CNAME"
+  value   = "2a09:8280:1::6:e9e6"
+  type    = "AAAA"
   ttl     = 1
-  proxied = true
+  proxied = false
 }
 
 resource "cloudflare_record" "acme_challenge_todo" {
