@@ -126,10 +126,10 @@ resource "cloudflare_record" "www_jakuboskera_dev" {
 resource "cloudflare_record" "guestbook_jakuboskera_dev" {
   zone_id = cloudflare_zone.jakuboskera_dev.id
   name    = "guestbook"
-  value   = "octagonal-tangerine-mxjyk49l20i2oxn88433gmp6.herokudns.com"
-  type    = "CNAME"
+  value   = "2a09:8280:1::1:e863"
+  type    = "AAAA"
   ttl     = 1
-  proxied = true
+  proxied = false
 }
 
 resource "cloudflare_record" "todo_jakuboskera_dev" {
