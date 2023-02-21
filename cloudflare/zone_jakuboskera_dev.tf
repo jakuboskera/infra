@@ -144,7 +144,7 @@ resource "cloudflare_record" "todo_jakuboskera_dev" {
 resource "cloudflare_record" "acme_challenge_todo" {
   zone_id = cloudflare_zone.jakuboskera_dev.id
   name    = "_acme-challenge.todo"
-  value   = "todo.jakuboskera.dev.d80don.flydns.net."
+  value   = "todo.jakuboskera.dev.d80don.flydns.net"
   type    = "CNAME"
   ttl     = 1
   proxied = false
@@ -153,7 +153,7 @@ resource "cloudflare_record" "acme_challenge_todo" {
 resource "cloudflare_record" "acme_challenge_guestbook" {
   zone_id = cloudflare_zone.jakuboskera_dev.id
   name    = "_acme-challenge.guestbook"
-  value   = "guestbook.jakuboskera.dev.onoxke.flydns.net."
+  value   = "guestbook.jakuboskera.dev.onoxke.flydns.net"
   type    = "CNAME"
   ttl     = 1
   proxied = false
