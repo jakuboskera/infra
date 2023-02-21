@@ -141,7 +141,7 @@ resource "cloudflare_record" "todo_jakuboskera_dev" {
   proxied = true
 }
 
-resource "cloudflare_record" "_acme-challenge.todo" {
+resource "cloudflare_record" "acme_challenge_todo" {
   zone_id = cloudflare_zone.jakuboskera_dev.id
   name    = "_acme-challenge.todo"
   value   = "todo.jakuboskera.dev.d80don.flydns.net."
