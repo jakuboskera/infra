@@ -149,3 +149,12 @@ resource "cloudflare_record" "acme_challenge_todo" {
   ttl     = 1
   proxied = false
 }
+
+resource "cloudflare_record" "acme_challenge_guestbook" {
+  zone_id = cloudflare_zone.jakuboskera_dev.id
+  name    = "_acme-challenge.guestbook"
+  value   = "guestbook.jakuboskera.dev.onoxke.flydns.net."
+  type    = "CNAME"
+  ttl     = 1
+  proxied = false
+}
