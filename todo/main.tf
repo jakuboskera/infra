@@ -11,6 +11,6 @@ resource "todo_task" "cooking" {
 }
 
 resource "todo_task" "girlfriend" {
-  text = "Find a kind and pretty girlfriend"
+  text    = "Find a kind and pretty girlfriend"
   is_done = true
 }
