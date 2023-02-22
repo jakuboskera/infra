@@ -9,3 +9,8 @@ resource "todo_task" "football" {
 resource "todo_task" "cooking" {
   text = "Cook more and more to become a masterchief"
 }
+
+resource "todo_task" "girlfriend" {
+  text    = "Find a kind and pretty girlfriend"
+  is_done = true
+}
