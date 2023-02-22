@@ -126,8 +126,8 @@ resource "cloudflare_record" "www_jakuboskera_dev" {
 resource "cloudflare_record" "guestbook_jakuboskera_dev" {
   zone_id = cloudflare_zone.jakuboskera_dev.id
   name    = "guestbook"
-  value   = "2a09:8280:1::1:e863"
-  type    = "AAAA"
+  value   = "write-comment.fly.dev"
+  type    = "CNAME"
   ttl     = 1
   proxied = false
 }
@@ -135,8 +135,8 @@ resource "cloudflare_record" "guestbook_jakuboskera_dev" {
 resource "cloudflare_record" "todo_jakuboskera_dev" {
   zone_id = cloudflare_zone.jakuboskera_dev.id
   name    = "todo"
-  value   = "2a09:8280:1::6:e9e6"
-  type    = "AAAA"
+  value   = "should-be-done.fly.dev"
+  type    = "CNAME"
   ttl     = 1
   proxied = false
 }
