@@ -7,5 +7,4 @@ Resources managed via Terraform in:
 
 - [Terraform Cloud](https://terraform.io/cloud)
 - [Cloudflare](http://cloudflare.com)
-- [Heroku](https://heroku.com)
 - [TODO](https://todo.jakuboskera.dev)

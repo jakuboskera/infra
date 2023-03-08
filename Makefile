@@ -16,9 +16,6 @@ pre-commit-all: ## Manually run all pre-commit hooks on a repository (all files)
 tf-terraform-cloud-init: ## Initialize a terraform project terraform-cloud
 	terraform -chdir=terraform-cloud init
 
-tf-heroku-init: ## Initialize a terraform project heroku
-	terraform -chdir=heroku init
-
 tf-todo-init: ## Initialize a terraform project todo
 	terraform -chdir=todo init
 
