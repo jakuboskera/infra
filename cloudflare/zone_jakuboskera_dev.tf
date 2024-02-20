@@ -43,7 +43,7 @@ resource "cloudflare_record" "jakuboskera_dev_mx02" {
 resource "cloudflare_record" "jakuboskera_dev_spf1" {
   zone_id = cloudflare_zone.jakuboskera_dev.id
   name    = "@"
-  value   = "v=spf1 redirect=icloud.com"
+  value   = "v=spf1 include=icloud.com ~all"
   type    = "TXT"
   ttl     = 3600
 }
