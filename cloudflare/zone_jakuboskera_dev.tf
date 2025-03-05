@@ -43,7 +43,7 @@ resource "cloudflare_record" "jakuboskera_dev_mx02" {
 resource "cloudflare_record" "jakuboskera_dev_spf1" {
   zone_id = cloudflare_zone.jakuboskera_dev.id
   name    = "@"
-  value   = "v=spf1 include:icloud.com ~all"
+  value   = "v=spf1 include:icloud.com -all"
   type    = "TXT"
   ttl     = 3600
 }
@@ -51,7 +51,7 @@ resource "cloudflare_record" "jakuboskera_dev_spf1" {
 resource "cloudflare_record" "jakuboskera_dev_dmarc" {
   zone_id = cloudflare_zone.jakuboskera_dev.id
   name    = "_dmarc"
-  value   = "v=DMARC1; p=none; rua=mailto:iam@jakuboskera.dev"
+  value   = "v=DMARC1; p=quarantine; rua=mailto:iam@jakuboskera.dev; ruf=mailto:iam@jakuboskera.dev; fo=1"
   type    = "TXT"
   ttl     = 1
 }
